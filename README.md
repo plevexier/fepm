@@ -7,6 +7,7 @@ using npm and therefore in node_modules, to an output directory.
 Here's an example.
 
 Copy it into frontend-package.json:
+```
 {
     "output": "dist",
     "packages": [
@@ -15,6 +16,6 @@ Copy it into frontend-package.json:
         {"vue": ["dist/vue.js"]}
     ]
 }
-
+```
 Save it in the root of your project and run:
 > fepm
