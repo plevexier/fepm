@@ -6,16 +6,18 @@ var path = require("path");
 var config_file = "frontend-package.json";
 var args = process.argv;
 
-console.log("current dir: " + process.cwd());
+var current_dir = process.cwd();
+
+console.log("current dir: " + current_dir);
 
 if(args.length < 3) {
 
-    if(fs.existsSync(process.cwd() + path.sep + config_file)) {
-        var content = fs.readFileSync(process.cwd() + path.sep + config_file, "utf8");
+    if(fs.existsSync(current_dir + path.sep + config_file)) {
+        var content = fs.readFileSync(current_dir + path.sep + config_file, "utf8");
         var obj = JSON.parse(content);
 
-        if(!fs.existsSync(process.cwd() + path.sep + obj.output)) {
-            fs.mkdirSync(process.cwd() + path.sep + obj.output);
+        if(!fs.existsSync(current_dir + path.sep + obj.output)) {
+            fs.mkdirSync(current_dir + path.sep + obj.output);
         } 
 
         obj.packages.forEach(function(p) {
@@ -23,8 +25,8 @@ if(args.length < 3) {
             var name = keys[0];
             var files = p[name];
 
-            if(!fs.existsSync(path.join(process.cwd(), obj.output, name))) {
-                fs.mkdirSync(path.join(process.cwd(), obj.output, name));
+            if(!fs.existsSync(path.join(current_dir, obj.output, name))) {
+                fs.mkdirSync(path.join(current_dir, obj.output, name));
             }
 
             files.forEach(function(file) {
@@ -32,8 +34,8 @@ if(args.length < 3) {
                 var filename = atoms[atoms.length - 1];
 
                 console.log("copying: " + name + path.sep + filename + "...");
-                var source = path.join(process.cwd(), "node_modules", name, file);
-                var dest = path.join(process.cwd(), obj.output, name, filename);
+                var source = path.join(current_dir, "node_modules", name, file);
+                var dest = path.join(current_dir, obj.output, name, filename);
                 fs.copySync(source, dest);
             });
         });
@@ -54,10 +56,10 @@ if(args.length < 3) {
         var dest = "";
         if(isGlobal) {
             console.log("global");
-            dest = process.cwd() + path.sep + config_file;
+            dest = current_dir + path.sep + config_file;
         } else {
             console.log("local");
-            dest = process.cwd() + path.sep + ".." + path.sep + config_file;
+            dest = current_dir + path.sep + ".." + path.sep + config_file;
         }
 
         if(!fs.existsSync(dest)) {
