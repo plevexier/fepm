@@ -4,6 +4,10 @@ Simple front-end package manager for node.
 Not really a package manager, just an util that copies front-end files, installed
 using npm and therefore in node_modules, to an output directory.
 
+Install it by:
+> npm install fepm -g
+
+
 Here's an example.
 
 Copy it into frontend-package.json:
