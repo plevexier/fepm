@@ -12,8 +12,8 @@ if(args.length < 3) {
         var content = fs.readFileSync(__dirname + path.sep + config_file, "utf8");
         var obj = JSON.parse(content);
 
-        if(!fs.existsSync(obj.output)) {
-            fs.mkdirSync(obj.output);
+        if(!fs.existsSync(__dirname + path.sep + obj.output)) {
+            fs.mkdirSync(__dirname + path.sep + obj.output);
         } 
 
         obj.packages.forEach(function(p) {
