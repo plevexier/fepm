@@ -6,6 +6,8 @@ var path = require("path");
 var config_file = "frontend-package.json";
 var args = process.argv;
 
+console.log("current dir: " + __dirname);
+
 if(args.length < 3) {
 
     if(fs.existsSync(__dirname + path.sep + config_file)) {
