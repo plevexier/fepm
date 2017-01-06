@@ -1,0 +1,28 @@
+{
+  "name": "fepm",
+  "version": "1.0.0",
+  "description": "Simple front-end package copier for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plevexier/fepm.git"
+  },
+  "keywords": [
+    "front-end",
+    "package",
+    "manager",
+    "node"
+  ],
+  "author": "Patrice Le Vexier <plevexier@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plevexier/fepm/issues"
+  },
+  "homepage": "https://github.com/plevexier/fepm#readme",
+  "dependencies": {
+    "fs-extra": "^1.0.0"
+  }
+}
