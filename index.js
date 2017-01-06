@@ -8,8 +8,8 @@ var args = process.argv;
 
 if(args.length < 3) {
 
-    if(fs.existsSync(config_file)) {
-        var content = fs.readFileSync(config_file, "utf8");
+    if(fs.existsSync(__dirname + path.sep + config_file)) {
+        var content = fs.readFileSync(__dirname + path.sep + config_file, "utf8");
         var obj = JSON.parse(content);
 
         if(!fs.existsSync(obj.output)) {
@@ -21,8 +21,8 @@ if(args.length < 3) {
             var name = keys[0];
             var files = p[name];
 
-            if(!fs.existsSync(obj.output + path.sep + name)) {
-                fs.mkdirSync(obj.output + path.sep + name);
+            if(!fs.existsSync(path.join(__dirname, obj.output, name))) {
+                fs.mkdirSync(path.join(__dirname, obj.output, name));
             }
 
             files.forEach(function(file) {

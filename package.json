@@ -1,6 +1,6 @@
 {
   "name": "fepm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple front-end package copier for node",
   "main": "index.js",
   "scripts": {
