@@ -1,6 +1,6 @@
 {
   "name": "fepm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple front-end package copier for node",
   "main": "index.js",
   "scripts": {
@@ -24,5 +24,8 @@
   "homepage": "https://github.com/plevexier/fepm#readme",
   "dependencies": {
     "fs-extra": "^1.0.0"
+  },
+  "bin": {
+    "fepm": "index.js"
   }
 }
