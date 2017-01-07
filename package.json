@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/plevexier/fepm#readme",
   "dependencies": {
-    "fs-extra": "^1.0.0"
+    "fs-extra": "^1.0.0",
+    "lodash": "^4.17.4"
   },
   "bin": {
     "fepm": "index.js"
