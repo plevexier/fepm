@@ -57,9 +57,9 @@ we will have the "source" file copied in:
 Action is not implemented yet.
 
 Note, in order to run it:
->fepm
+`fepm`
 will execute using the frontend-package.json in your current directory.
 
 Or you can do:
->fepm filename.json
+`fepm filename.json`
 if you have multiple files for example.
