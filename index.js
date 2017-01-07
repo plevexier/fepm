@@ -56,7 +56,7 @@ function executeCommand(command, params) {
 
 function executeConfig(file) {
 
-    var envValue = process.env.ENV;
+    var envValue = process.env.NODE_ENV;
     var content = fs.readFileSync(file, "utf8");
     var obj = JSON.parse(content);
 
