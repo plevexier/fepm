@@ -11,28 +11,50 @@ environments.
 
 Here's a quick explanation of some of the properties:
 
-```/output```
-this is the output directory for all the environments.
+```
+/output
+```
+This is the output directory for all the environments.
 
-```/environments/name and /environments/default```
+```
+/environments/name and /environments/default
+```
+
 name: name of the environment, should be the same as the environment 
-variable ENV.
-default: if ```default = true```, this environment will be used even if not ENV 
-variable is set.
+variable ENV. default: if 
+```
+default = true
+```
+this environment will be used even if not ENV variable is set.
 
-```/environments/configuration/packages```
+```
+/environments/configuration/packages
+```
 Here, we list all the packages we want to process. The "name" here will be 
 used as output directory for the package. So if:
-```/output = "dist"``` and ```name = "jquery"``` all the "files" listed in 
-this package will go into:
-```./dist/jquery.```
+```
+/output = "dist"
+``` 
+and 
+```
+name = "jquery"
+``` 
+all the "files" listed in this package will go into:
+```
+./dist/jquery.
+```
 
 Note the property "outputName" for each file will be used as destination
-name. So in above example, if ```outputName="jquery.js"```, we will have the
-"source" file copied in: 
-```./dist/jquery/jquery.js```
+name. So in above example, if 
+```
+outputName="jquery.js"
+```
+we will have the "source" file copied in: 
+```
+./dist/jquery/jquery.js
+```
 
-action is not implemented yet.
+Action is not implemented yet.
 
 Note, in order to run it:
 >fepm
