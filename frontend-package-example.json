@@ -1,0 +1,54 @@
+{
+    "environments": 
+    {
+        "destination": "dist",
+        "development": {
+            "default": true,
+            "packages": [
+                { 
+                    "name": "axios", 
+                    "files": ["node_modules/axios/dist/axios.js"]
+                },
+                {
+                    "name": "bootstrap",
+                    "files": [
+                        {
+                            "comment": "Will go in dist/bootstrap/js",
+                            "source":  "node_modules/bootstrap/dist/js/bootstrap.js",
+                            "destination": "js",
+                            "action": ["minify"]
+                        }, 
+                        {
+                            "source": "node_modules/bootstrap/dist/css/bootstrap.css",
+                            "destination": "css"
+                        }
+                    ]
+                },
+                {
+                    "name": "vue",
+                    "files": [
+                        {
+                            "source": "node_modules/vue/dist/vue.js"
+                        }
+                    ]
+                },
+                {
+                    "name": "jquery",
+                    "files": [
+                        {
+                            "source": "node_modules/jquery/dist/jquery.js"
+                        }
+                    ]
+                },
+                {
+                    "name": "jquery-validation",
+                    "files": [
+                        {
+                            "source": "dist/jquery.validate.js"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
