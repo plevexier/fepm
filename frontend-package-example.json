@@ -60,6 +60,65 @@
                     }
                 ]
             }
-        }       
+        },
+        {
+            "name": "production",
+            "configuration": {
+                "packages": [
+                    { 
+                        "name": "axios", 
+                        "files": [
+                            {
+                                "outputName": "axios.js",
+                                "source": "node_modules/axios/dist/axios.min.js"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "bootstrap",
+                        "files": [
+                            {
+                                "outputName": "bootstrap.js",
+                                "source":  "node_modules/bootstrap/dist/js/bootstrap.min.js",
+                                "destination": "js",
+                                "action": ["minify"]
+                            }, 
+                            {
+                                "outputName": "bootstrap.css",
+                                "source": "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                                "destination": "css"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "vue",
+                        "files": [
+                            {
+                                "outputName": "vue.js",
+                                "source": "node_modules/vue/dist/vue.min.js"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "jquery",
+                        "files": [
+                            {
+                                "outputName": "jquery.js",
+                                "source": "node_modules/jquery/dist/jquery.min.js"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "jquery-validation",
+                        "files": [
+                            {
+                                "outputName": "jquery.validate.js",
+                                "source": "node_modules/jquery-validation/dist/jquery.validate.min.js"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }               
     ]
 }

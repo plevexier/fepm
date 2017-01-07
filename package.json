@@ -1,7 +1,7 @@
 {
   "name": "fepm",
-  "version": "1.0.7",
-  "description": "Simple front-end package copier for node",
+  "version": "1.1.0",
+  "description": "Simple front-end package copier for node.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
